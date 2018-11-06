@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html itemscope itemtype="http://schema.org/Article">
+<head>
+<meta name="google-signin-scope" content="profile email">
+<meta name="google-signin-client_id" content="170483988151-u8ae15gork85g28o3cm2fb94bns39ibs.apps.googleusercontent.com" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="../stylesheets/jquery-ui.css">
+<link rel="stylesheet" href="../stylesheets/bootstrap.min.css" crossorigin="anonymous">
+<link rel="stylesheet" href="../stylesheets/style.css"/>
+<script type="text/javascript" src="../javascripts/jquery-3.3.1.min.js"></script>
+<script src="https://apis.google.com/js/platform.js" async defer></script>
+</head>
+<body>
+
+
+<button id ="loginButton" type="button" class="btn btn-primary signIn" onclick="document.getElementById('flipKortLoginModal').style.display='block'" >Login/Sign Up</button>
+
+<div id="flipKortLoginModal" class="modal">
+
+  <div class="modal-content animate">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('flipKortLoginModal').style.display='none'" class="close" title="Close Modal">&times;</span>
+    </div>
+
+    <div class="container">
+      <label for="uname"><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password"  required>
+
+      <button onclick="successfulLogin();">Login</button>
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <div class="g-signin2" data-onsuccess="onSignIn"></div>
+    </div>
+  </div>
+</div>
+<script src="../javascripts/index.js"></script>
+
+</body>
+</html>
